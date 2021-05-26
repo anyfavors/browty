@@ -30,7 +30,7 @@ jobs:
         uses: andy-v-h/get-release-asset-action@v1.1.0
         with:
           repo: butlerx/wetty
-          release: 2.0.3
+          release: '2.0.3'
           rename: release.zip
           
       - name: unpack release
