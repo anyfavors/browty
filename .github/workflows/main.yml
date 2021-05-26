@@ -30,5 +30,5 @@ jobs:
         uses: Legion2/download-release-action@68df3d242858e28a7e6d8b9838a3e6730cdfc422
         with:
           repository: butlerx/wetty
-          tag: '2.0.3'
+          tag: 'v2.0.3'
           path: ./app
