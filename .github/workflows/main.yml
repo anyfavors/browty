@@ -32,3 +32,6 @@ jobs:
           repository: butlerx/wetty
           tag: 'v2.0.3'
           path: ./app
+          
+      - name: prepare files for build.
+        run: ls
