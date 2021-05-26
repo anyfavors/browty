@@ -34,4 +34,4 @@ jobs:
           path: ./app
           
       - name: prepare files for build.
-        run: cp app/wetty*/* app/ && ls ./app
+        run: cp -r ./app/wetty*/* ./app/ && ls ./app
