@@ -27,11 +27,8 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: check out wetty to app
-        uses: andy-v-h/get-release-asset-action@v1.1.0
+        uses: Legion2/download-release-action@68df3d242858e28a7e6d8b9838a3e6730cdfc422
         with:
-          repo: butlerx/wetty
-          release: '2.0.3'
-          rename: release.zip
-          
-      - name: unpack release
-        run: unzip release.zip -d app
+          repository: butlerx/wetty
+          tag: '2.0.3'
+          path: ./app
