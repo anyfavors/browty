@@ -11,10 +11,13 @@ FROM node:fermium-alpine
 WORKDIR /app
 ENV NODE_ENV=production
 EXPOSE 3000
-COPY --from=builder /app/dist /app/dist
+
+
+COPY --from=builder /app/build /app/build
 COPY --from=builder /app/node_modules /app/node_modules
-COPY --from=builder /app/package.json /app/package.json
-COPY --from=builder /app/index.js /app/index.js
+COPY package.json /app
+
+
 RUN apk add -U openssh-client sshpass
 ADD run.sh /app
 
