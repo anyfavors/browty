@@ -15,7 +15,7 @@ EXPOSE 3000
 
 COPY --from=builder /app/build /app/build
 COPY --from=builder /app/node_modules /app/node_modules
-COPY package.json /app
+COPY ./app/package.json /app
 
 
 RUN apk add -U openssh-client sshpass
