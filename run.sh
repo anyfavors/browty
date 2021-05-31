@@ -14,10 +14,10 @@ else
   mkdir ~/.ssh && \
   ssh-keyscan -H -p ${REMOTE_SSH_PORT} ${REMOTE_SSH_SERVER} > ~/.ssh/known_hosts
 
-  cmd="npm start -- -p ${WETTY_PORT} --sshhost ${REMOTE_SSH_SERVER} --sshport ${REMOTE_SSH_PORT} --base ${BASE}" 
+  cmd="npm start -- -p ${WETTY_PORT} --sshhost ${REMOTE_SSH_SERVER} --sshport ${REMOTE_SSH_PORT} --base ${BASE} --ssh-config /etc/ssh/ssh_config" 
   if ! [ "x${REMOTE_SSH_USER}" == "x" ]; then
     cmd="${cmd} --sshuser ${REMOTE_SSH_USER}"
-  fi
+  fi 
   if ! [ "x${SSH_AUTH}" == "x" ]; then
     cmd="${cmd} --sshauth ${SSH_AUTH}"
   fi
